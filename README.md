@@ -15,4 +15,4 @@ This repository is mainly for my personal interest. We will learn web3.js with i
 [Github pages][demo-page]
 
 
-[demo-page]:https://santonychoi.github.io/enjoyable-web3-js/
+[demo-page]:https://santonychoi.github.io/enjoyable-web3-js/index.html
