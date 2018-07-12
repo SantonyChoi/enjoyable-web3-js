@@ -22,11 +22,12 @@ App = {
   createEntry: function() {
     var privKey = keythereum.create(App.keyParams).privateKey;
     var pubKey = ethereumjs.Util.privateToPublic(privKey);
-    var address = '0x' + ethereumjs.Util.publicToAddress(pubKey).toString('hex');
+    var address = ethereumjs.Util.publicToAddress(pubKey);
 
     return {
       private: '0x' + privKey.toString('hex'),
-      address: address
+      public: '0x' + pubKey.toString('hex'),
+      address: '0x' + address.toString('hex')
     }
   },
 
@@ -34,6 +35,7 @@ App = {
     var keys = App.createEntry();
 
     $("#priv-entry").text(keys.private);
+    $("#priv-entry").text(keys.public);
     $("#addr-entry").text(keys.address);
     web3.eth.getBalance(keys.address, function(err, result) {
       $("#bal-entry").text(result);
