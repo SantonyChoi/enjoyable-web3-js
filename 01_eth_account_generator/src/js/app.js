@@ -35,7 +35,7 @@ App = {
     var keys = App.createEntry();
 
     $("#priv-entry").text(keys.private);
-    $("#priv-entry").text(keys.public);
+    $("#pub-entry").text(keys.public);
     $("#addr-entry").text(keys.address);
     web3.eth.getBalance(keys.address, function(err, result) {
       $("#bal-entry").text(result);
