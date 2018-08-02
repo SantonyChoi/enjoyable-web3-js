@@ -11,7 +11,7 @@
     "url": "https://github.com/SantonyChoi/enjoyable-solidity"
   },
   "dependencies": {
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.4.0"
   },
   "author": "SantonyChoi",
   "license": "MIT"
