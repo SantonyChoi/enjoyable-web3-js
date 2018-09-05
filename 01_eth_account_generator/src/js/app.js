@@ -34,11 +34,11 @@ App = {
   showEntry: function() {
     var keys = App.createEntry();
 
-    $("#priv-entry").text(keys.private);
-    $("#pub-entry").text(keys.public);
-    $("#addr-entry").text(keys.address);
-    web3.eth.getBalance(keys.address, function(err, result) {
-      $("#bal-entry").text(result);
+    document.querySelector("#priv-entry").textContent = keys.private;
+    document.querySelector("#pub-entry").textContent = keys.public;
+    document.querySelector("#addr-entry").textContent = keys.address;
+    web3.eth.getBalance(keys.address, function(e, result) {
+      document.querySelector("#bal-entry").textContent = result;
     });
   },
 
@@ -48,11 +48,5 @@ App = {
 
 }
 
-$(function() {
-  $(document).ready(function() {
-    App.init();
-    $("#refresh-btn").click(function() {
-      location.reload();
-    });
-  });
-});
+App.init();
+document.querySelector("#refresh-btn").addEventListener('click', () => {App.showEntry()});
