@@ -34,11 +34,11 @@ App = {
   showEntry: function() {
     var keys = App.createEntry();
 
-    document.querySelector("#priv-entry").textContent = keys.private;
-    document.querySelector("#pub-entry").textContent = keys.public;
-    document.querySelector("#addr-entry").textContent = keys.address;
+    document.querySelector("#entry__priv").textContent = keys.private;
+    document.querySelector("#entry__pub").textContent = keys.public;
+    document.querySelector("#entry__addr").textContent = keys.address;
     web3.eth.getBalance(keys.address, function(e, result) {
-      document.querySelector("#bal-entry").textContent = result;
+      document.querySelector("#entry__bal").textContent = result;
     });
   },
 

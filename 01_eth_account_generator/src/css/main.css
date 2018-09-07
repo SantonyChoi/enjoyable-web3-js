@@ -1,13 +1,9 @@
-body {
-  padding-top: 54px;
+nav {
+  background-color: darkblue  ;
+  color: white;
+  font-size: 3em;
 }
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
-}
-
-.pagination {
-  margin-bottom: 15px;
+.container {
+  display: grid;
+  grid-auto-rows: 1fr;
 }
