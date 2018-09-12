@@ -11,21 +11,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Ethereum Prv to Addr</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-
-        {this.entities.map(title => {
-          return (
-            <div>
-              <Title title={title} />
-              <input type="text" name={title} />
-            </div>
-          );
-        })}
+        <nav>Ethereum Prv to Addr</nav>
+        <hr></hr>
+        <div className="container">
+          {this.entities.map(title => {
+            return (
+              <div>
+                <Title title={title} />
+                <input type="text" name={title} />
+                <div className="empty-box" />
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }
