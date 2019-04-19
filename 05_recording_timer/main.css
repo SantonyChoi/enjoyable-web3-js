@@ -61,7 +61,6 @@ ul li.checked::before {
 }
 
 .header {
-  background-color: #f44336;
   padding: 30px 40px;
   color: white;
   text-align: center;
@@ -98,4 +97,22 @@ input {
 
 .addBtn:hover {
   background-color: #bbb;
+}
+
+.container {
+  display: flex;
+  justify-content: center
+}
+
+#myProgress {
+  width: 400px;
+  height: 400px;
+  background-color: #ffe;
+  justify-content: center;
+}
+
+#myBar {
+  height: 100%;
+  width: 20%;
+  background-color: #f46;
 }

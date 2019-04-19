@@ -53,3 +53,9 @@ function newElement() {
     };
   }
 }
+
+var remainingSeconds = 3500;
+var progress = document.getElementById("myBar");
+function changeProgress() {
+  progress.style.width = `${(remainingSeconds/ 3600) * 100}%`;
+}

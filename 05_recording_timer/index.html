@@ -1,10 +1,17 @@
 <body>
     <link rel="stylesheet" href="./main.css" />
 
+    <div class="container">
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+
+    </div>
+
     <div id="myDIV" class="header">
         <h2>My To Do List</h2>
         <input type="text" id="myInput" placeholder="Title...">
-        <span onClick="newElement()" class="addBtn">Add</span>
+        <span onClick="changeProgress()" class="addBtn">Add</span>
     </div>
 
     <ul id="myUL">
